@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #e7b0b0, rgb(154, 154, 241));
+}
+
+.person{
+  max-width: 320px;
+  background-color: red;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+}
+.cover img{
+  border-radius: 50%;
+  object-fit:fill;
+}
+.cover{
+  background-color: purple;
+  
+}
