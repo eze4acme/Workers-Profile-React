@@ -6,7 +6,6 @@ body{
 
 .person{
   max-width: 320px;
-  background-color: red;
   margin: 0 auto;
   text-align: center;
   padding: 50px;
@@ -14,8 +13,28 @@ body{
 .cover img{
   border-radius: 50%;
   object-fit:fill;
+  margin-top: 20px;
+  border:2px solid purple;
 }
 .cover{
-  background-color: purple;
-  
+  background-color: rgb(131, 52, 131);
+  padding: 10px 0;
+  border-radius: 4%;
+  transition: all 0.5s linear;
+}
+.text-section h3{
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.text-section {
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 0 0 0.5px black;
+  text-transform: capitalize;
+}
+p{
+  text-align:center;
+}
+.cover:hover{
+  box-shadow: 5px 10px 15px #2201224d;
 }

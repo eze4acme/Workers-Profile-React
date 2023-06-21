@@ -6,17 +6,47 @@ function App() {
 }
 
 function PersonList() {
-  return <Person />;
+  const people = [
+    {
+      img: 35,
+      name: "john",
+      job: "developer",
+    },
+    {
+      img: 78,
+      name: "james",
+      job: "designer",
+    },
+    {
+      img: 90,
+      name: "luke",
+      job: "artist",
+    },
+  ];
+
+  return (
+    <section>
+      <Person person={people[0]} />
+      <Person person={people[1]}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+       nihil provident!
+      </Person>
+      <Person person={people[2]} />
+    </section>
+  );
 }
-function Person(params) {
-  const url =  "https://randomuser.me/api/portraits/thumb/men/75.jpg";
+function Person(props) {
+  const { img, name, job } = props.person;
+  const {children} = props
+  const url = `https://randomuser.me/api/portraits/thumb/men/${img}.jpg`;
   return (
     <div className="person">
       <div className="cover">
         <img src={url} alt="" />
         <div className="text-section">
-          <h4>name</h4>
-          <h4>Job</h4>
+          <h3>{name}</h3>
+          <h4>{job}</h4>
+          <p>{children}</p>
         </div>
       </div>
     </div>
